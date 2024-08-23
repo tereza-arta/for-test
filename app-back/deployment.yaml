@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubia
+  namespace: back
+  labels:
+    app: kubia-b
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubia-b
+  template:
+    metadata:
+      labels:
+        app: kubia-b
+    spec:
+      containers:
+      - name: kubia-cnt
+        image: terezabisharyan/kubia
+        ports:
+        - containerPort: 80
