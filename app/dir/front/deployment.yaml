@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kubia
-  namespace: prod
+  namespace: front
   labels:
-    app: kubia
+    app: kubia-f
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kubia
+      app: kubia-f
   template:
     metadata:
       labels:
-        app: kubia
+        app: kubia-f
     spec:
       containers:
       - name: kubia-cnt
