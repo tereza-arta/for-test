@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kubia
-  namespace: back
+  namespace: back-ns
   labels:
     app: kubia-b
 spec:
